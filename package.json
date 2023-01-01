@@ -1,0 +1,46 @@
+{
+  "name": "gaming_platform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack ",
+    "dev": "webpack serve --mode development --open",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coddie2d/gaming_platform.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Coddie2d/gaming_platform/issues"
+  },
+  "homepage": "https://github.com/Coddie2d/gaming_platform#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "bootstrap": "^5.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.3",
+    "file-loader": "^6.2.0",
+    "fontello": "^0.5.0",
+    "gh-pages": "^4.0.0",
+    "graceful-fs": "^4.2.10",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "icons-loader": "^0.0.6",
+    "mini-css-extract-plugin": "^2.7.2",
+    "postcss-loader": "^7.0.2",
+    "postcss-preset-env": "^7.8.3",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "fontello-webpack-plugin": "^0.4.8"
+  }
+}
