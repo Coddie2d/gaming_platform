@@ -6,21 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaming platform</title>
 </head>
-<body>
+<body class="">
     <header class="header">
         <nav class="header__nav_body">
             <div class="header__nav_logo">
-                <p class="header__nav_logo_text logo_text">LOGO</p>
+                <a href="" class="header__nav_logo_text logo_text link">LOGO</a>
             </div>
             <div class="header__nav_right_side">
                 <div class="header__nav_links">
-                    <a href="" class="header__nav_link link second_title">About us</a>
-                    <a href="" class="header__nav_link link second_title">Home</a>
-                    <a href="" class="header__nav_link link second_title">Portfolio</a>
-                    <a href="" class="header__nav_link link second_title">News</a>
-                    <a href="" class=" link header__nav_button btn">Contact us</a>
+                    <a href="" class="nav_link header__nav_link link second_title">About us</a>
+                    <a href="" class="nav_link header__nav_link link second_title">Home</a>
+                    <a href="" class="nav_link header__nav_link link second_title">Portfolio</a>
+                    <a href="" class="nav_link header__nav_link link second_title">News</a>
+                    <a href="" class="nav_link  link header__nav_button btn">Contact us</a>
                 </div>
-                <span class="burger_Menu"></span>
+                
+            </div>
+            <div class="burger_Menu">
+                <span></span>
             </div>
         </nav>
         <div class="container">
@@ -29,7 +32,7 @@
                     <p class="header__left_title title">3D game Dev </p>
                     <p class="header__left_title_second second_title">Work that we produce for our clients</p>
                     <p class="header__left_subtitle subtitile">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-                    <a href=""><button class="header__left_button button btn">Get more details</button></a>
+                    <a href="" class="get_more_details_link"><button class="header__left_button button btn">Get more details</button></a>
                 </div>
                 <div class="header__right">
                     <img src="/src/images/home__unity_img.png" alt="unity_img" class="unity_img">
@@ -45,7 +48,7 @@
         <div class="container">
             <div class="curentTrandingGames__title_row">
                 <p class="curentTrandingGames__title title">Currently Trending Games</p>
-                <a href="" class="link"><button class="btn button button_see_all">SEE ALL</button></a>
+                <a href="" class="link "><button class="btn button button_see_all">SEE ALL</button></a>
             </div>
             <div class="curentTrandingGames__cards_row">
                 <div class="curentTrandingGames_card">
@@ -317,28 +320,30 @@
                 <p class="notification_through_email__title title">Lorem Ipsum</p>
                 <p class="notification_through_email__subtitle subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                 <div class="notification_through_email__inner_form">
-                    <div class="text_side">
-                        <p class="notification_through_email__inner_form_title title">Stay in the loop</p>
-                        <p class="notification_through_email__inner_form_subtitle subtitle">Subscribe to receive the latest news and updates about TDA.
-                            We promise not to spam you! </p>
-                    </div>
-                    <div class="form_side">
-                        <input type="email" class="email_form" placeholder="Enter email address">
-                        <a href="" class="link email_form_button"><button class="btn button notification_through_email_button">Continue</button></a>
+                    <p class="notification_through_email__inner_form_title title">Stay in the loop</p>
+                    <div class="notification_wrapper">
+                        <div class="text_side">
+                            <p class="notification_through_email__inner_form_subtitle subtitle">Subscribe to receive the latest news and updates about TDA.
+                                We promise not to spam you! </p>
+                        </div>
+                        <div class="form_side">
+                            <input type="email" class="email_form" placeholder="Enter email address">
+                            <a href="" class="link email_form_button"><button class="btn button notification_through_email_button">Continue</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <footer class="footer">
-        <div class="footer__logo_column column">
-            <p class="footer__logo_column__title title">LOGO</p>
+    <footer class="footer col-12">
+        <div class="footer__logo_column column col-lg-3 col-md-6 col-sm-6">
+            <a href="" class="footer__logo_column__title title link">LOGO</a>
             <p class="footer__logo_column__subtitle subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
             <p class="footer__logo_column__subtitle subtitle">@Logo</p>
         </div>
 
-        <div class="footer__about_us_column column">
+        <div class="footer__about_us_column column col-lg-3 col-md-6 col-sm-6">
             <a href="" class="footer__about_us_column__title title link">About us</a>
             <a href="" class="footer__about_us_column__subtitle subtitile link">Zeux</a>
             <a href="" class="footer__about_us_column__subtitle subtitile link">Portfolio</a>
@@ -346,13 +351,13 @@
             <a href="" class="footer__about_us_column__subtitle subtitile link">Contact us</a>
         </div>
 
-        <div class="footer__contact_us_column column">
-            <p class="footer__contact_us_column__title title">Contact us</p>
+        <div class="footer__contact_us_column column col-lg-3 col-md-6 col-sm-6">
+            <a href="" class="footer__contact_us_column__title title link">Contact us</a>
             <p class="footer__contact_us_column__subtitle subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
             <p class="footer__contact_us_column__subtitle subtitle">+908 89097 890</p>
         </div>
 
-        <div class="footer__social_media_column column">
+        <div class="footer__social_media_column column col-lg-3 col-md-6 col-sm-6">
             <a href="" class="link footer__icon_link"><i class="icon-facebook  footer__icon"></i></a>
             <a href="" class="link footer__icon_link"><i class="icon-instagram footer__icon" ></i></a>
             <a href="" class="link footer__icon_link"><i class="icon-twitter footer__icon" ></i></a>
