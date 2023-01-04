@@ -1,6 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 @import url(https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;800;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
 $sizes: ("xs":320px, "sm":576px, "md":768px, "lg":992px, "xl":1200px);
 @mixin media($minmax, $media) {
     @each $size, $resolution in $sizes {
@@ -11,7 +12,20 @@ $sizes: ("xs":320px, "sm":576px, "md":768px, "lg":992px, "xl":1200px);
       } 
     }
 }
-
+.rounded_button{
+    background: linear-gradient(92.48deg, #FA8305 2.08%, #FB9E3C 117.25%);
+    border-radius: 20px;
+}
+.bread_crumbs_text{
+    font-size: 12px;
+}
+.disable-select {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
 .lock{
     overflow: hidden;
 }
@@ -60,6 +74,21 @@ h1,h2,h3,h4,h5,h6,p,a,span{
     font-weight: 500;
     background: rgba(255, 255, 255, 0.11);
 }
+.header__nav_button {
+      
+    margin-left: 30px ;
+    color: white;
+    padding: 3px 12px;
+    font-size: 13px;
+    
+    background-color: orange;
+    &:hover{
+        border: 1px solid white;
+    }
+    @include media('max','lg'){
+        margin-left: unset;
+    }
+}
 .header {
     .header__nav_body {
         position: relative;
@@ -103,21 +132,7 @@ h1,h2,h3,h4,h5,h6,p,a,span{
                 }
             }
         }
-        .header__nav_button {
-      
-            margin-left: 30px ;
-            color: white;
-            padding: 3px 12px;
-            font-size: 13px;
-            
-            background-color: orange;
-            &:hover{
-                border: 1px solid white;
-            }
-            @include media('max','lg'){
-                margin-left: unset;
-            }
-        }
+        
         
     }
     @include media('max','lg'){
@@ -152,7 +167,7 @@ h1,h2,h3,h4,h5,h6,p,a,span{
             height: 10%;
             width: 100%;
             transition: all 1s ease 0s;
-            background-color: #F1CDB3;
+            background-color: white;
             
         }
         .burger_Menu::before,
@@ -233,8 +248,6 @@ h1,h2,h3,h4,h5,h6,p,a,span{
             }
             .header__left_button {
                 padding: 5px 20px;
-                background: linear-gradient(92.48deg, #FA8305 2.08%, #FB9E3C 117.25%);
-                border-radius: 20px;
                 margin-top: 10px;
             }
             @include media('max','lg'){
@@ -660,6 +673,7 @@ h1,h2,h3,h4,h5,h6,p,a,span{
     .footer__social_media_column {
         display: flex;
         align-items: flex-end;
+        justify-content: center;
         .footer__icon_link {
             display: flex;
             justify-content: center;

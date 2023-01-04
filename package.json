@@ -30,6 +30,7 @@
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "icons-loader": "^0.0.6",
+    "jquery": "^3.6.3",
     "mini-css-extract-plugin": "^2.7.2",
     "postcss-loader": "^7.0.2",
     "postcss-preset-env": "^7.8.3",
@@ -41,6 +42,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "fontello-webpack-plugin": "^0.4.8"
+    "fontello-webpack-plugin": "^0.4.8",
+    "slick-carousel": "^1.8.1"
   }
 }
