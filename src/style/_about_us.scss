@@ -41,6 +41,8 @@ body{
 
 
             .main_section__right {
+                width: 50%;
+                align-self: center;
             }
             .content {
             }
@@ -49,6 +51,23 @@ body{
             .one-time {
             }
             
+
+            @include media('max','lg'){
+                flex-direction: column;
+                .main_section__left > *{
+                    text-align: center;
+                    margin: 0 auto;
+                }
+                .main_section__left{
+                    padding: 20px 0 30px;
+                    .get_more_details_link {
+                        transform: translate(-50%, 0%);
+                        left: 50%;
+                        position: relative;
+                    }
+                }
+            }
+
         }
     }
     
@@ -103,7 +122,12 @@ body{
                 max-width: 300px;
             }
         }
-      
+        @include media('max','lg'){
+            flex-wrap: wrap;
+            .work_with_us__card{
+                margin: 20px 0;
+            }
+        }
     }
  
     }

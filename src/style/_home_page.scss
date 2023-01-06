@@ -49,6 +49,7 @@ h1,h2,h3,h4,h5,h6,p,a,span{
     font-weight: 400;
     font-size: 16px;
 }
+
 .logo_text {
     font-family: "Poppins";
     font-weight: 800;
@@ -561,9 +562,11 @@ h1,h2,h3,h4,h5,h6,p,a,span{
 
         .notification_through_email__inner_form_title {
             max-width: 400px;
-            text-align: center;
-            margin: 0 auto;
             padding-bottom: 10px;
+            @include media('max','md'){
+                text-align: center;
+                margin: 0 auto;
+            }
         }    
         .notification_wrapper{
             display: flex;

@@ -3,7 +3,7 @@ import * as bootstrap from 'bootstrap';
 import * as fontello from '../icons/fontello-d81d4521/css/fontello.css';
 import * as functions from "./functions.js";
 import * as slick from "slick-carousel"
-import $ from 'jquery';;
+import $ from 'jquery';
 functions.burgerClick();
 
 $(".one-time").slick({
@@ -14,4 +14,10 @@ $(".one-time").slick({
     autoplay:true,
   });
 
-  document.querySelector('.main_section__right').style.maxWidth = document.querySelector('.slick-current img').width + 'px';
+
+if(innerWidth <= 768){
+    document.querySelector('.text_side .notification_through_email__inner_form_title').classList.add('d-none');
+
+} else {
+    document.querySelector('.notification_through_email__inner_form .notification_through_email__inner_form_title').classList.add('d-none');
+}
