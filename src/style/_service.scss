@@ -1,6 +1,39 @@
+@import "mixin";
+
+
+.gg-shape-triangle {
+    position: relative;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 17px;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid;
+    transform: rotate(90deg);
+}
+.gg-shape-triangle,
+.gg-shape-triangle::before {
+    display: block;
+    box-sizing: border-box;
+    border-right: 3px solid transparent
+}
+.gg-shape-triangle::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid;
+    border-top: 3px solid;
+    border-bottom: 3px solid transparent;
+    transform: rotate(45deg) skew(10deg,10deg);
+    left: -2px;
+    bottom: -13px
+}
+
+
+
 .header__statistic_section {
     padding-top: 80px;
-    .statistic_section__container > *{
+    .statistic_section__container > :not(.header__statistic__modules ){
         padding-bottom: 15px;
     }
     .statistic_section__container {
@@ -10,19 +43,38 @@
         }
         
         .header__statistic__modules {
-            padding: 65px 80px;
             display: flex;
-            justify-content: center;
+            padding: 30px 40px;
+            justify-content: space-around;
             background-color: #1C140F;
             border-radius: 10px;
             margin-top: 20px;
+            @include media('max','lg'){
+                padding: 10px 10px;
+            }
+            .header__statistic__module:not(.header__statistic__module:last-child){
+                &::after{
+                    content: "";
+                    position: relative;
+                    left: 50%;
+                    width: 2px;
+                    height: 100px;
+                    background-color: #FFECEC;
+                    position: relative;
+                    @include media('max','lg'){
+                        left: 33%;
+                    }
+                }
+                
+            }
             .header__statistic__module {
                 display: flex;
+                position:relative;  
                 justify-content: center;
                 align-items: center;
-                .statistic__module_icon_wripper {
+                .statistic__module_icon_wrapper {
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: center;
                     align-items: center;
                     margin-right: 20px;
                     background-color: #FFECEC;
@@ -46,6 +98,22 @@
                 }
 
             }
+            @include media('max','md'){
+                flex-direction: column;
+                .header__statistic__module:not(.header__statistic__module:last-child){
+                    &::after{
+                        width: 200px;
+                        height: 2px;
+                        position: absolute;
+                        transform: translate(-50%,0%);
+                        left: 50%;
+                        bottom: 0%;
+                    }
+                }
+                .header__statistic__module{
+                    padding: 30px 0 ;
+                }
+            }
      
         }
  
@@ -55,3 +123,135 @@
 }
 
 
+.our_advantages {
+    padding-top: 70px;
+    .our_advantages__container{
+    display: flex;
+    justify-content: center;
+    .our_advantages__img {
+        position: relative;
+        .circle {
+            width: 60px;
+            height: 60px;
+            border: solid white 5px;
+            border-radius: 50%  ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            .gg-shape-triangle {
+                margin-left: 5px;
+                color: white;
+            }
+        }
+    
+    }
+    .our_advantages__advantages > :not(.our_advantages__advantages_list){
+        padding-bottom: 15px;
+    }
+    .our_advantages__advantages {
+        padding-left: 40px;
+        .our_advantages__title {
+            max-width: 380px;
+        }
+        .our_advantages__subtitle {
+            max-width: 420px;
+        }
+        .our_advantages__advantages_list {
+            .our_advantages__li {
+                padding: 10px;
+                display: flex;
+                align-items: center;
+            }
+            .our_advantages__li_text {
+                max-width: 330px;
+            }
+            .our_advantages_icon {
+                margin-right: 5px;
+            }
+        }
+    }
+   
+}
+}
+.service__about_games{
+    .service_about_game {
+        .service_about_game__container {
+            padding-top: 150px;
+            display: flex;
+            justify-content: space-evenly;
+            .service_about_game__text_section > :not(:last-child){
+                padding-bottom: 30px;
+            }
+            .service_about_game__text_section {
+                
+                .service_about_game__title {
+                    width: 470px;
+                }
+                
+                .service_about_game__first_subtitle {
+                    max-width: 530px;
+                }
+                
+                .service_about_game__second_subtitle {
+                    max-width: 500px;
+                }
+                .read_more_link {
+                }
+                .read_more_button {
+                    background-color: #DC7000;
+                    padding: 10px 30px;
+                    color: white;
+                    &:hover{
+                        color: #1C140F;
+                        border: #FFECEC solid 1px;
+                    }
+                }
+            }
+
+            
+            .service_about_game__img_section {
+            }
+
+            
+        }
+        
+        
+    }
+    @include media('max','lg'){
+       
+        .service_about_game__text_section > *{
+            text-align: center;
+            margin: 0 auto;
+        }
+        .service_about_game__img_section > *{
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .service_about_game__text_section{
+            padding-top: 30px;
+            .read_more_button{
+                display: flex;
+            }
+        }
+
+    }
+}
+.service__about_games .service__about_game:nth-child(1){
+    
+        .service_about_game__container{
+            flex-direction: column;
+        }
+    
+}
+
+
+.service__about_game:nth-child(odd){
+    .service_about_game__container{
+        flex-direction: column-reverse;
+    }
+}
