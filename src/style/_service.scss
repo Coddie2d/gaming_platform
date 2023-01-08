@@ -126,58 +126,75 @@
 .our_advantages {
     padding-top: 70px;
     .our_advantages__container{
-    display: flex;
-    justify-content: center;
-    .our_advantages__img {
-        position: relative;
-        .circle {
-            width: 60px;
-            height: 60px;
-            border: solid white 5px;
-            border-radius: 50%  ;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
-            .gg-shape-triangle {
-                margin-left: 5px;
-                color: white;
-            }
-        }
-    
-    }
-    .our_advantages__advantages > :not(.our_advantages__advantages_list){
-        padding-bottom: 15px;
-    }
-    .our_advantages__advantages {
-        padding-left: 40px;
-        .our_advantages__title {
-            max-width: 380px;
-        }
-        .our_advantages__subtitle {
-            max-width: 420px;
-        }
-        .our_advantages__advantages_list {
-            .our_advantages__li {
-                padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .our_advantages__img {
+            position: relative;
+            .circle {
+                width: 60px;
+                height: 60px;
+                border: solid white 5px;
+                border-radius: 50%  ;
                 display: flex;
+                justify-content: center;
                 align-items: center;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                .gg-shape-triangle {
+                    margin-left: 5px;
+                    color: white;
+                }
             }
-            .our_advantages__li_text {
-                max-width: 330px;
+        
+        }
+        .our_advantages__advantages > :not(.our_advantages__advantages_list){
+            padding-bottom: 15px;
+        }
+        .our_advantages__advantages {
+            padding-left: 40px;
+            .our_advantages__title {
+                max-width: 380px;
             }
-            .our_advantages_icon {
-                margin-right: 5px;
+            .our_advantages__subtitle {
+                max-width: 420px;
+            }
+            .our_advantages__advantages_list {
+                .our_advantages__li {
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                }
+                .our_advantages__li_text {
+                    max-width: 330px;
+                }
+                .our_advantages_icon {
+                    margin-right: 5px;
+                    min-width: 25px;
+                    min-height: 24px;
+                }
+            }
+        }
+        @include media('max','lg'){
+            flex-direction: column;
+            .our_advantages__advantages > *{
+                text-align: center;
+                margin: 0 auto;
+            }
+            .our_advantages__advantages{
+                padding-top: 20px;
+                .our_advantages__advantages_list {
+                    .our_advantages__li_text{
+                        max-width: 420px;
+                    }
+                }
             }
         }
     }
-   
 }
-}
-.service__about_games{
+.service_about_games{
     .service_about_game {
         .service_about_game__container {
             padding-top: 150px;
@@ -222,7 +239,16 @@
         
     }
     @include media('max','lg'){
-       
+            .service_about_game:nth-child(even){
+                .service_about_game__container{
+                    flex-direction: column;
+                }
+            }
+            .service_about_game:nth-child(odd){
+                .service_about_game__container{
+                    flex-direction: column-reverse;
+                }
+            }
         .service_about_game__text_section > *{
             text-align: center;
             margin: 0 auto;
@@ -240,18 +266,167 @@
         }
 
     }
+
 }
-.service__about_games .service__about_game:nth-child(1){
-    
-        .service_about_game__container{
-            flex-direction: column;
+
+
+
+.reviews_section {
+    padding: 100px 0;
+    background-color: rgba(28, 20, 15, 1);
+    .reviews_section__container {
+            
+        .reviews_section__title {
+            max-width: 450px;
+            text-align: center;
+            padding-bottom: 20px;
+            margin: 0 auto;
+
         }
+        .reviews_section__subtitle {
+            max-width: 555px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .content {
+            padding-top: 40px;
+            .reviews_slider {
+                .slider_comment {
+                    min-height: 230px;
+                    border-radius: 10px;
+                    max-width: 400px;
+                    padding: 30px;
+                    border: 3px solid white;
+                    .comment_top {
+                        padding-bottom: 20px;
+                        display: flex;
+                        justify-content: space-between;
+                        .about_user_wrapper {
+                            display: flex;
+                            .comment_top__name_and_from {
+                                padding-left: 20px;
+                                .comment_top_name {
+                                    max-width: 150px;
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                }
+                                
+                                .comment_top_from {
+                                    max-width: 150px;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    color: rgba(79, 86, 101, 1);
+                                }
+                            }
+                        }
+                        .stars {
+
+                            .stars_text{
+                                font-size: 16px;
+                                font-weight: 400;
+                                .icon-star {
+                                    margin-left: 5px;
+                                    color: #FEA250 !important;
+                                }
+                               
+                            }
+                         
+                        }
+
+                    }
+                   
+                    .comment_bottom {
+                        .comment_bottom__text {
+
+                        }
+                    }
+
+                }
+                
+            }
+
+        }
+        .slider_navigation {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .slider_navigation__dots {
+                display: flex;
+            }
+            .slider_navigation__arrows {
+                margin-right: 10px;
+                display: flex;
+                .arrow{
+                    width: 50px;
+                    height: 50px;
+                    border: 2px solid #DC7000 ;
+                    border-radius: 50%;
+                    margin: 0 5px;
+                    background-color: transparent;
+                    &[aria-disabled="false"]{
+                        background-color: #DC7000;
+                        i{
+                            color: white;
+                        }
+                    }
+                }
+                .slider_navigation__arrow_right {
+
+                }
+                
+                .slick-disabled{
+
+                }
+                .icon-right-1 {
+                    color: #DC7000;
+                }
+                .slider_navigation__arrow_left {
+                }
+                .icon-left-1 {
+                    color: #DC7000;
+                }
+            }
+
+        }
+
+        
+        
+    }
+}
+.slick-dots{
+    position: unset !important;
+}
+.slick-dots li.slick-active {
+    background-color: transparent;
+    margin: 0 30px 0 0;
+    button{
+        width: 45px;
+        background-color: #DC7000;
+        border-radius: 20px;
+        margin-right: 10px;
+        transition: .4s ease 0s;
+    }
+
+       
     
 }
+.slick-dots li button {
+    font-family: 'slick';
+     line-height: 20px;
+     width: 20px;
+     height: 20px;
+     background-color: white;
+     text-align: center;
+     border-radius: 50%;
 
-
-.service__about_game:nth-child(odd){
-    .service_about_game__container{
-        flex-direction: column-reverse;
-    }
+   }
+.slick-dots li button{
+    width: 20px;
+    height: 20px;
+}
+.slick-dots li button:before{
+    content: unset;
+}
+.slick-dots li{
+    margin: 0 15px;
 }
