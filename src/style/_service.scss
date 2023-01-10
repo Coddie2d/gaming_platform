@@ -29,22 +29,52 @@
     bottom: -13px
 }
 
+.header__text_section {
+    .header__text__container {
+        padding-top: 30px;
+        .bread_crumbs {
+        }
+        .bread_crumbs_text {
+        }
+        
+        .header_text__title {
+            max-width: 940px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .header_text__subtitle {
+            max-width: 600px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        @include media('max','sm'){
+            .header_text__title {   
+                font-size: 23px;
+            }
+            
+            .header_text__subtitle {
+                font-size: 14px;
+            }
+        }
+    }
+    
+    
+}
+
 
 
 .header__statistic_section {
-    padding-top: 80px;
+    padding-top: 20px;
     .statistic_section__container > :not(.header__statistic__modules ){
         padding-bottom: 15px;
     }
     .statistic_section__container {
-        .header_service__title {
-        }
-        .header_service__subtitle {
-        }
         
         .header__statistic__modules {
+            max-width: 900px;
+            margin: 0 auto;
             display: flex;
-            padding: 30px 40px;
             justify-content: space-around;
             background-color: #1C140F;
             border-radius: 10px;
@@ -68,6 +98,7 @@
                 
             }
             .header__statistic__module {
+                padding: 30px 40px;
                 display: flex;
                 position:relative;  
                 justify-content: center;
@@ -196,6 +227,9 @@
 }
 .service_about_games{
     .service_about_game {
+        .service_about_game__container:last-child{
+            padding-bottom: 30px;
+        }
         .service_about_game__container {
             padding-top: 150px;
             display: flex;
@@ -272,7 +306,7 @@
 
 
 .reviews_section {
-    padding: 100px 0;
+    padding: 70px 0;
     background-color: rgba(28, 20, 15, 1);
     .reviews_section__container {
             
@@ -386,13 +420,34 @@
                     color: #DC7000;
                 }
             }
-
+            @include media('max','sm'){
+                flex-direction: column;
+                .slider_navigation__dots {
+                    padding-bottom: 20px;
+                }
+            }
         }
 
         
         
     }
 }
+
+@include media('max','lg'){
+    .slick-slide{
+        margin: 0 auto;
+        display: flex !important;
+        justify-content: center;
+    }
+}
+
+.slick-current{
+    .slider_comment{
+        border: 3px solid #DC7000 !important;
+        background-color: #0F0901;
+    }
+}
+
 .slick-dots{
     position: unset !important;
 }

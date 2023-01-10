@@ -18,4 +18,20 @@ $(".reviews_slider").slick({
     nextArrow:$('.slider_navigation__arrow_right'),
     appendDots:$('.slider_navigation__dots'),
     dotsClass: 'slick-dots',
+    responsive: [{
+
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+      }
+
+    }, {
+
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 1,
+        
+      }
+
+    }]
   });

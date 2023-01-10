@@ -579,7 +579,9 @@ h1,h2,h3,h4,h5,h6,p,a,span{
             display: flex;
             justify-content: space-between;
             align-items: center;
-         
+            @include media('max','md') {
+                flex-direction: column;
+            }
           
         }
 
@@ -592,7 +594,9 @@ h1,h2,h3,h4,h5,h6,p,a,span{
                         max-width: 500px;
                     }
                     @include media('max','md'){
-                        max-width: 300px;
+                        max-width: 400px;
+                        text-align: center;
+                        padding-bottom: 10px;
                     }
                 }
             }
