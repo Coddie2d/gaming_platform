@@ -72,42 +72,109 @@
             height: 7px;
         }
     }
+    .hidden{
+        visibility: hidden !important;
+    }
+    .text_for_marker {  
+        border-radius: 10px;
+        position: absolute;
+        visibility: visible;
+        padding: 10px 10px;
+        max-width: 300px;
+        background-color:maroon;
+        .text_for_marker__title {
+            max-width: 250px;
+            padding-bottom: 10px;
+            text-align: center;
+            margin: 0 auto;
+        }
+    
+        .text_for_marker__subtitle {
+            max-width: 200px;
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+    .marker1 {
+        left: 77%;
+        top: 2%;
+    }
+    .marker2 {
+        top: 40%;
+    }
+    .marker3 {
+        top: 9%;
+        left: 45%;
+    }
+    .marker4 {
+        left: 20%;
+        top: 70%;
+    }
+    .marker5 {
+        left: 43%;
+        top: 52%;
+    }
+    .marker6 {
+        left: 74%;
+        top: 44%;
+    }
+    .marker7 {
+        top: -3%;
+        left: 0%;
+    }
+    .marker8 {
+        left: 70%;
+        top: 78%;
+    }
+    .marker9 {
+        left: 60%;
+        top: 32%;
+    }
+    .position1{
+        left: 71%;
+        top: 24%;
 
-    .position1 {
     }
 
 
     .position2 {
+        left: 24%;
+        top: 38%;
     }
 
 
     .position3 {
+        left: 53%;
+        top: 35%;
     }
 
     .position4 {
+        left: 30%;
+        top: 63%;
     }
     .position5 {
+        left: 46%;
+        top: 45%;
     }
     .position6 {
+        left: 82%;
+        top: 40%;
     }
     .position7 {
+        left: 15%;
+        top: 23%;
     }
     .position8 {
+        left: 81%;
+        top: 71%;
     }
     .position9 {
+        left: 57%;
+        top: 43%;
+
     }
     
-    .position1{
-        left: 27%;
-        top: 6%;
-        @include media('max','xl'){
-            left: 26%;
 
-        }
-        @media (min-width:1400px) {
-            left: 30%;
-        }
-    }
 }
 .contact_us__statistic__modules_addition{
     background-color: transparent !important;
@@ -149,4 +216,74 @@
     border-radius: 50%;
     margin: 0 5px;
     color: white;
+}
+
+
+.form_section {
+    .form_section__container {
+
+        .outer_form__title {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .outer_form__subtitle {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .contact_us_form {
+            margin: 0 auto;
+            // display: flex;
+            // flex-direction: column;
+            max-width: 670px;
+            .label_text {
+                font-family: "Poppins";
+                font-weight: 500;
+                font-size: 14px;
+                color: #4F4F4F;
+            }
+            .contact_us__style_form {
+                background-color: rgba(255, 255, 255, 0.07);
+                border-radius: 10px;
+                border: 1px solid rgba(206, 206, 206, 1);
+            }
+            .full_name__form {
+                display: flex;
+                justify-content: space-between;
+                .name__form {
+                    
+                    .name_input {
+                        width: 320px;
+                        height: 50px;
+                    }
+                    
+                }
+                .surname__form {
+                    .surname {
+                        width: 320px;
+                        height: 50px;
+                    }
+                }
+            }
+
+
+
+
+            .email_form {   
+                height: 50px;
+                width: 100%;
+            }
+            .message_form {
+                width: 100%;
+            }
+            .contact_us__form_button {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+        
+        
+    }
+
 }
