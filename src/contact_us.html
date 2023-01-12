@@ -7,9 +7,7 @@
     <title>Contact us</title>
 </head>
 <body>
-    <!-- <svg width="1048" height="267" viewBox="0 0 1048 267" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 1C29.4186 32.5504 103.606 94.1487 173.008 88.1391C259.759 80.6271 319 56 393.377 79.1247C439.677 93.5199 435.257 138.219 477.137 170.771C519.017 203.323 701.495 124.197 701.495 124.197C701.495 124.197 830.127 66.6047 842.591 124.197C855.055 181.789 803.702 250.398 827.135 264.421C845.881 275.638 982.856 224.357 1049 197.313" stroke="#E17A0E" stroke-opacity="0.24"/>
-        </svg> -->
+
         <header class="header">
             <nav class="header__nav_body">
     
@@ -108,7 +106,7 @@
                 </div>
             </section>  
             
-            <section class="header__statistic_section">
+            <section class="header__statistic_section header__statistic_section__contact_us">
                 <div class="statistic_section__container container">
                     <div class="header__statistic__modules contact_us__statistic__modules_addition">
                         <div class="header__statistic__module contact_us__statistic__module_addition flex-column">
@@ -136,30 +134,43 @@
     
             </section>
         </header>
-        <section class="form_section">
-            <div class="form_section__container">
-                <p class="outer_form__title title">Say hello</p>
-                <p class="outer_form__subtitle subtitle">Lorem Ipsum is simply dummy text of the printing .</p>
-                <form action="" class="contact_us_form">
-                    <div class="full_name__form">
-                        <div class="name__form" >
-                            <label for="name " class="label_text">First Name</label>
-                            <input type="text" name="name" class="name_input contact_us__style_form">
-                        </div>
-                        <div class="surname__form">
-                            <label for="last_name " class="label_text">Last Name</label>
-                            <input type="text" class="surname contact_us__style_form" name="last_name">
-                        </div>
+        <div class="form_bgc_wrapper">
 
-                    </div>
-                    <label for="email " class="label_text">Email Address</label>
-                    <input type="email" name="email" class="email_form contact_us__style_form">
-                    <label for="message " class="label_text">Message</label>
-                    <input type="text"   name="message" class="message_form contact_us__style_form">
-                    <button class="contact_us__form_button">Get in touch</button>
-                </form>
-            </div>
-        </section>
-        
+            <section class="form_section">
+                <svg width="1048" height="267" viewBox="0 0 1048 267" class="bezier_top"  fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1C29.4186 32.5504 103.606 94.1487 173.008 88.1391C259.759 80.6271 319 56 393.377 79.1247C439.677 93.5199 435.257 138.219 477.137 170.771C519.017 203.323 701.495 124.197 701.495 124.197C701.495 124.197 830.127 66.6047 842.591 124.197C855.055 181.789 803.702 250.398 827.135 264.421C845.881 275.638 982.856 224.357 1049 197.313" stroke="#E17A0E" stroke-opacity="0.24"/>
+                </svg>                
+                <div class="form_section__container">
+                    <p class="outer_form__title title">Say hello</p>
+                    <p class="outer_form__subtitle subtitle">Lorem Ipsum is simply dummy text of the printing .</p>
+                    <form action="" class="contact_us_form">
+                        <div class="full_name__form">
+                            <div class="name__form" >
+                                <label for="name " class="label_text">First Name</label>
+                                <input type="text" name="name" class="name_input contact_us__style_form">
+                            </div>
+                            <div class="surname__form">
+                                <label for="last_name " class="label_text">Last Name</label>
+                                <input type="text" class="surname contact_us__style_form" name="last_name">
+                            </div>
+
+                        </div>
+                        <div class="email">
+                            <label for="email " class="label_text">Email Address</label>
+                            <input type="email" name="email" class="email_form contact_us__style_form">
+                        </div>
+                        <div class="message">
+                            <label for="message " class="label_text">Message</label>
+                            <textarea name="message" id="" class="message_form contact_us__style_form" cols="30" rows="10" ></textarea>
+                        </div>
+                        <div class="form__button_wrapper"><button class="contact_us__form_button">Get in touch</button></div>
+                    </form>
+                </div>
+                <svg width="568" height="258" viewBox="0 0 568 258" class="bezier_bottom"  fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 90.5832C28.934 66.4404 78.6557 31.1588 137.925 15.1579C205.5 -3.08543 322.663 -16.1217 371.172 58.1153C395.132 94.784 369.128 136.415 398 168.415C426.691 200.213 474.941 179.777 511.5 196.915C543.5 211.915 552 238.415 567 256.915" stroke="#E4E4E4"/>
+                </svg>
+                    
+            </section>
+        </div>
 </body>
 </html>
