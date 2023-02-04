@@ -73,12 +73,12 @@
         }
     }
     .hidden{
-        visibility: hidden !important;
+        visibility: hidden !important ;
     }
+
     .text_for_marker {  
         border-radius: 10px;
         position: absolute;
-        visibility: visible;
         padding: 10px 10px;
         max-width: 300px;
         background-color:maroon;
@@ -93,6 +93,15 @@
             max-width: 200px;
             text-align: center;
             margin: 0 auto;
+        }
+        @include media('max','md'){
+            padding: 5px 5px;
+            .text_for_marker__title{
+                font-size: 20px;
+            }
+            .text_for_marker__subtitle{
+                font-size: 14px;
+            }
         }
     }
     .marker1 {
